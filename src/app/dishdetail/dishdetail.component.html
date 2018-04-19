@@ -1,0 +1,269 @@
+<div class="container">
+
+  <div *ngIf="dish">
+    <h2>Detalles:</h2>
+    <div><span>id: </span>{{dish._id}}</div>
+
+    <form #detailForm="ngForm">
+
+        <div class="form-group">
+          <label for="id_num">Cédula</label>
+          <input type="number" class="form-control" id="id_num"
+            required
+            [(ngModel)]="dish.id_num" name="id_num"
+            #id_num="ngModel">
+          <div [hidden]="id_num.valid || id_num.pristine"
+            class="alert alert-danger">
+            campo requerido
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" class="form-control" id="name"
+                required
+                [(ngModel)]="dish.name" name="name"
+                #name="ngModel">
+          <div [hidden]="name.valid || name.pristine"
+              class="alert alert-danger">
+              campo requerido
+          </div>
+        </div>
+
+      <div class="form-group">
+        <label for="lastName">Apellido</label>
+        <input type="text" class="form-control" id="lastName"
+          required
+          [(ngModel)]="dish.lastName" name="lastName"
+          #lastName="ngModel">
+        <div [hidden]="lastName.valid || lastName.pristine"
+          class="alert alert-danger">
+          campo requerido
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Teléfono</label>
+          <input type="number" class="form-control" id="id_num"
+            required
+            [(ngModel)]="dish.phone" name="phone"
+            #phone="ngModel">
+          <div [hidden]="phone.valid || phone.pristine"
+            class="alert alert-danger">
+            campo requerido
+          </div>
+      </div>
+
+      <div class="form-group">
+        <label for="city">Ciudad</label>
+        <select class="form-control" id="city"
+                required
+                [(ngModel)]="dish.city" name="city"
+                #city="ngModel">
+          <option *ngFor="let cit of cities" [value]="cit">{{cit}}</option>
+        </select>
+        <div [hidden]="city.valid || city.pristine" class="alert alert-danger">
+          campo requerido
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="barrio">Barrio</label>
+        <select class="form-control" id="barrio"
+          required
+          [(ngModel)]="dish.barrio" name="barrio"
+          #barrio="ngModel">
+          <option *ngFor="let barr of barrios" [value]="barr">{{barr}}</option>
+        </select>
+        <div [hidden]="barrio.valid || barrio.pristine" class="alert alert-danger">
+          campo requerido
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Dirección</label>
+        <input type="text" class="form-control" id="address"
+          required
+          [(ngModel)]="dish.address" name="address"
+          #address="ngModel">
+        <div [hidden]="address.valid || address.pristine"
+          class="alert alert-danger">
+          campo requerido
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="sex">Sexo: </label>
+        <input type="radio" value="masc" name="sex" [(ngModel)]="dish.sex"> M 
+        <input type="radio" value="fem" name="sex" [(ngModel)]="dish.sex"> F 
+        <input type="radio" value="N/E" name="sex" [(ngModel)]="dish.sex"> No especifica 
+      </div>
+
+      <div class="form-group">
+        <label for="id_num">Fecha de Nacimiento</label>
+        <input type="date" class="form-control" id="birthday"
+          required
+          [(ngModel)]="dish.birthday" name="birthday"
+          #birthday="ngModel">
+        <div [hidden]="birthday.valid || birthday.pristine"
+          class="alert alert-danger">
+          campo requerido
+        </div>
+      </div>
+
+      <div class="form-group">
+          <label for="marital">Estado Civil</label>
+          <select class="form-control" id="marital"
+                  required
+                  [(ngModel)]="dish.marital" name="marital"
+                  #marital="ngModel">
+            <option *ngFor="let marit of maritals" [value]="marit">{{marit}}</option>
+          </select>
+          <div [hidden]="marital.valid || marital.pristine" class="alert alert-danger">
+            campo requerido
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" class="form-control"
+            required minlength="5" email
+            [(ngModel)]="dish.email" #email="ngModel" >
+          <div *ngIf="email.invalid && (email.dirty || email.touched)"
+            class="alert alert-danger">
+            <div *ngIf="email.errors.required">
+              campo requerido
+            </div>
+            <div *ngIf="email.errors.email">
+              correo no válido
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="marketing">Nos conoce por</label>
+          <select class="form-control" id="marketing"
+            required
+            [(ngModel)]="dish.marketing" name="marketing"
+            #marketing="ngModel">
+            <option *ngFor="let mark of marketings" [value]="mark">{{mark}}</option>
+          </select>
+          <div [hidden]="marketing.valid || marketing.pristine" class="alert alert-danger">
+            campo requerido
+          </div>
+        </div>
+
+        <h3>***Datos Clínica***</h3>
+       
+        <div class="form-group">
+          <label for="datePV">Fecha PV</label>
+          <input type="date" class="form-control" id="datePV"
+            required
+            [(ngModel)]="dish.datePV" name="datePV"
+            #datePV="ngModel">
+            <div [hidden]="datePV.valid || datePV.pristine"
+              class="alert alert-danger">
+              campo requerido
+            </div>
+        </div>
+    
+        <div class="form-group">
+          <label for="clinic">Clinica</label>
+          <select class="form-control" id="clinic"
+                  required
+                  [(ngModel)]="dish.clinic" name="clinic"
+                  #clinic="ngModel">
+            <option *ngFor="let clin of clinics" [value]="clin">{{clin}}</option>
+          </select>
+          <div [hidden]="clinic.valid || clinic.pristine" class="alert alert-danger">
+            campo requerido
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="comercial">Comercial</label>
+          <select class="form-control" id="comercial"
+                  required
+                  [(ngModel)]="dish.comercial" name="comercial"
+                  #comercial="ngModel">
+            <option *ngFor="let com of comercials" [value]="com">{{com}}</option>
+          </select>
+          <div [hidden]="comercial.valid || comercial.pristine" class="alert alert-danger">
+            campo requerido
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="doctorPV">Doctor PV</label>
+          <select class="form-control" id="doctorPV"
+                  required
+                  [(ngModel)]="dish.doctorPV" name="doctorPV"
+                  #doctorPV="ngModel">
+            <option *ngFor="let doc of doctors" [value]="doc">{{doc}}</option>
+          </select>
+          <div [hidden]="doctorPV.valid || doctorPV.pristine" class="alert alert-danger">
+            campo requerido
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="formaPago">Forma de Pago</label>
+          <select class="form-control" id="formaPago"
+                  required
+                  [(ngModel)]="dish.formaPago" name="formaPago"
+                  #formaPago="ngModel">
+            <option *ngFor="let forma of formasdepago" [value]="forma">{{forma}}</option>
+          </select>
+          <div [hidden]="formaPago.valid || formaPago.pristine" class="alert alert-danger">
+            campo requerido
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="importeFF">Importe a financiar</label>
+          <input type="number" class="form-control" id="importeFF"
+            required
+            [(ngModel)]="dish.importeFF" name="importeFF"
+            #importeFF="ngModel">
+          <div *ngIf="importeFF.invalid && (importeFF.dirty || importeFF.touched)"
+            class="alert alert-danger">
+            <div *ngIf="importeFF.errors.required">
+            campo requerido
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="DNIFF">DNI de financiación</label>
+          <input type="number" class="form-control" id="DNIFF"
+            [(ngModel)]="dish.DNIFF" name="DNIFF"
+            #DNIFF="ngModel">        
+        </div>
+
+        <div class="form-group">
+          <label for="financiera">Financiera</label>
+          <select class="form-control" id="financiera"
+                  required
+                  [(ngModel)]="dish.financiera" name="financiera"
+                  #financiera="ngModel">
+            <option *ngFor="let fin of financieras" [value]="fin">{{fin}}</option>
+          </select>
+          <div [hidden]="financiera.valid || financiera.pristine" class="alert alert-danger">
+            campo requerido
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Comentarios (opcional)</label>
+          <input type=text class="form-control" id="description"
+                [(ngModel)]="dish.description" name="description"
+                #description="ngModel">
+        </div>
+
+      <button (click)="goBack()">go back</button>
+      <button (click)="save()">save</button>
+    </form>
+
+  </div>
+
+</div>
