@@ -54,7 +54,7 @@ export class DishService {
       "datePV": paciente.datePV, "clinic": paciente.clinic, "comercial": paciente.comercial, 
       "doctorPV": paciente.doctorPV, "importeFF": paciente.importeFF, "DNIFF": paciente.DNIFF,
       "financiera": paciente.financiera, 
-      "estadoFF": paciente.estadoFF, "formaPago": paciente.formaPago, 
+      "estadoFF": paciente.estadoFF, "formaPago": paciente.formaPago, "facturado": paciente.facturado,
       "description": paciente.description, "campo1":paciente.campo1, "campo2":paciente.campo2 })
 
         .catch(error => { return this.processHTTPMsgService.handleError(error); });
@@ -68,8 +68,9 @@ export class DishService {
       "marital": dish.marital, "email": dish.email, "marketing": dish.marketing,
       "datePV": dish.datePV, "clinic": dish.clinic, "comercial": dish.comercial, 
       "doctorPV": dish.doctorPV, "importeFF": dish.importeFF, "DNIFF": dish.DNIFF,
-      "financiera": dish.financiera, "estadoFF": dish.estadoFF, "formaPago": dish.formaPago, 
-      "description": dish.description, "campo1":dish.campo1, "campo2":dish.campo2 })
+      "financiera": dish.financiera, "estadoFF": dish.estadoFF, "formaPago": dish.formaPago,
+      "facturado": dish.facturado, "description": dish.description, 
+      "campo1":dish.campo1, "campo2":dish.campo2 })
 
         .catch(error => { return this.processHTTPMsgService.handleError(error); });
   }
