@@ -44,9 +44,9 @@ export class NuevoComponent implements OnInit {
     importeFF: 0,
     DNIFF: null,
     financiera: this.financieras[0],
-    previsiones: '',
     estadoFF: '',
     formaPago: this.formasdepago[0],
+    facturado: null,
     description: ''
   };
 

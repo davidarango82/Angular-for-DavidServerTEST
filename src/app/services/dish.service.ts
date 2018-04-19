@@ -53,7 +53,7 @@ export class DishService {
       "marital": paciente.marital, "email": paciente.email, "marketing": paciente.marketing,
       "datePV": paciente.datePV, "clinic": paciente.clinic, "comercial": paciente.comercial, 
       "doctorPV": paciente.doctorPV, "importeFF": paciente.importeFF, "DNIFF": paciente.DNIFF,
-      "financiera": paciente.financiera, "previsiones": paciente.previsiones, 
+      "financiera": paciente.financiera, 
       "estadoFF": paciente.estadoFF, "formaPago": paciente.formaPago, 
       "description": paciente.description, "campo1":paciente.campo1, "campo2":paciente.campo2 })
 
@@ -68,8 +68,7 @@ export class DishService {
       "marital": dish.marital, "email": dish.email, "marketing": dish.marketing,
       "datePV": dish.datePV, "clinic": dish.clinic, "comercial": dish.comercial, 
       "doctorPV": dish.doctorPV, "importeFF": dish.importeFF, "DNIFF": dish.DNIFF,
-      "financiera": dish.financiera, "previsiones": dish.previsiones, 
-      "estadoFF": dish.estadoFF, "formaPago": dish.formaPago, 
+      "financiera": dish.financiera, "estadoFF": dish.estadoFF, "formaPago": dish.formaPago, 
       "description": dish.description, "campo1":dish.campo1, "campo2":dish.campo2 })
 
         .catch(error => { return this.processHTTPMsgService.handleError(error); });
