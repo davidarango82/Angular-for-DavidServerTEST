@@ -254,6 +254,26 @@
         </div>
 
         <div class="form-group">
+          <label for="estadoFF">Estado Financiación</label>
+          <select class="form-control" id="estadoFF"
+                  required
+                  [(ngModel)]="dish.estadoFF" name="estadoFF"
+                  #estadoFF="ngModel">
+            <option *ngFor="let est of estadoFFs" [value]="est">{{est}}</option>
+          </select>
+          <div [hidden]="estadoFF.valid || estadoFF.pristine" class="alert alert-danger">
+            campo requerido
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="facturado">Facturado</label>
+          <input type=text class="form-control" id="facturado"
+                [(ngModel)]="dish.facturado" name="facturado"
+                #facturado="ngModel">
+        </div>        
+
+        <div class="form-group">
           <label for="description">Comentarios (opcional)</label>
           <input type=text class="form-control" id="description"
                 [(ngModel)]="dish.description" name="description"

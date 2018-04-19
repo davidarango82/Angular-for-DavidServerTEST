@@ -18,8 +18,8 @@ export class Paciente {
     importeFF: number;
     DNIFF: number; //DNI de quien financia
     financiera: string;
-    previsiones: string;
     estadoFF: string;
     formaPago: string;
+    facturado: number;
     description: string;
   }

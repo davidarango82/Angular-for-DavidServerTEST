@@ -40,13 +40,19 @@ export class DishdetailComponent implements OnInit {
   /** validation values */
   cities = ['Bogota', 'Medellin', 'Cali', 'Barranquilla', 'Pasto'];
   clinics = ['Calle 90', 'Santafe', 'Unicentro', 'Andino'];
-  barrios = ['Rosales', 'San José de Bavaria', 'Usaquen', 'Cedritos'];
+  barrios = ['Otro', 'Rosales', 'San José de Bavaria', 'Usaquen', 'Cedritos'];
   marketings = ['TV', 'radio', 'calle', 'volante', 'recibo de servicios', 'un amigo'];
-  comercials = ['com1', 'com2', 'com3'];
+  comercials = ['Lisseth Lemus', 'Francisco Mora', 'Andres Ardila', 'Diego Garcia', 
+  'Nubia Pinzon', 'Javier Tibaduiza', 'Alisson Mora', 'Liliana Reyes', 'Claudia Tamayo'];
   maritals = ['soltero', 'casado', 'union libre', 'separado', 'viudo'];
-  doctors = ['N/A', 'doc1', 'doc2', 'doc3'];
+  doctors = ['N/A', 'Maria Suarez', 'Laura Roncancio', 'Manuel Manjarrez', 
+  'Johanna Mendoza', 'Luz Quesada', 'Johan Basterrechea', 'Zulma Rojas',
+  'Sebastian Rivera','Sandra Mancera', 'Diana Castillo', 'Diana Florez', 
+  'Viviana Diaz', 'Catalina Monroy', 'Mauricio Montoya',
+  'Tatiana Angulo', 'Ricardo Posada'];
   formasdepago = ['N/A', 'Pronto pago', 'Financiado'];
   financieras = ['N/A', 'Colpatria', 'BBVA', 'Denticuotas'];
+  estadoFFs = ['prevision', 'imputado', 'facturado'];
 
   formErrors = {
     'author': '',
