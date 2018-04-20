@@ -21,6 +21,8 @@ export class NuevoComponent implements OnInit {
   doctors = ['N/A', 'doc1', 'doc2', 'doc3'];
   formasdepago = ['N/A', 'Pronto pago', 'Financiado'];
   financieras = ['N/A', 'Colpatria', 'BBVA', 'Denticuotas'];
+  tipoPVs = ['Primera Visita', 'Traslado'];
+  estadoFFs = ['Prevision', 'Denegado', 'Imputado', 'Facturado']
 
   paciente: Paciente = {
     /** datos diligenciados por el paciente */
@@ -39,6 +41,7 @@ export class NuevoComponent implements OnInit {
     /**datos diligenciados por clinica */
     datePV: '',
     clinic: this.clinics[0],
+    tipoPV: this.tipoPVs[0],
     comercial: '',
     doctorPV: '',
     importeFF: 0,
@@ -47,7 +50,9 @@ export class NuevoComponent implements OnInit {
     estadoFF: '',
     formaPago: this.formasdepago[0],
     facturado: null,
-    description: ''
+    description: '',
+    campo1: '',
+    campo2: ''
   };
 
   constructor(private dishService: DishService) { }

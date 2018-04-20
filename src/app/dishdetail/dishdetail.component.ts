@@ -52,7 +52,8 @@ export class DishdetailComponent implements OnInit {
   'Tatiana Angulo', 'Ricardo Posada'];
   formasdepago = ['N/A', 'Pronto pago', 'Financiado'];
   financieras = ['N/A', 'Colpatria', 'BBVA', 'Denticuotas'];
-  estadoFFs = ['prevision', 'imputado', 'facturado'];
+  tipoPVs = ['Primera Visita', 'Traslado'];
+  estadoFFs = ['Prevision', 'Denegado', 'Imputado', 'Facturado']
 
   formErrors = {
     'author': '',

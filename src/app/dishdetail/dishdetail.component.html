@@ -180,6 +180,19 @@
           </div>
         </div>
 
+        <!-- <div class="form-group">
+          <label for="tipoPV">Tipo de Primera</label>
+          <select class="form-control" id="tipoPV"
+                  required
+                  [(ngModel)]="dish.tipoPV" name="tipoPV"
+                  #tipoPV="ngModel">
+            <option *ngFor="pv of tipoPVs" [value]="pv">{{pv}}</option>
+          </select>
+          <div [hidden]="tipoPV.valid || tipoPV.pristine" class="alert alert-danger">
+            campo requerido
+          </div>
+        </div> -->
+
         <div class="form-group">
           <label for="comercial">Comercial</label>
           <select class="form-control" id="comercial"

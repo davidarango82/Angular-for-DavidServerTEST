@@ -52,7 +52,7 @@ export class DishService {
       "address": paciente.address, "sex": paciente.sex, "birthday": paciente.birthday, 
       "marital": paciente.marital, "email": paciente.email, "marketing": paciente.marketing,
       "datePV": paciente.datePV, "clinic": paciente.clinic, "comercial": paciente.comercial, 
-      "doctorPV": paciente.doctorPV, "importeFF": paciente.importeFF, "DNIFF": paciente.DNIFF,
+      "tipoPV": paciente.tipoPV,"doctorPV": paciente.doctorPV, "importeFF": paciente.importeFF, "DNIFF": paciente.DNIFF,
       "financiera": paciente.financiera, 
       "estadoFF": paciente.estadoFF, "formaPago": paciente.formaPago, "facturado": paciente.facturado,
       "description": paciente.description, "campo1":paciente.campo1, "campo2":paciente.campo2 })
@@ -67,7 +67,7 @@ export class DishService {
       "address": dish.address, "sex": dish.sex, "birthday": dish.birthday, 
       "marital": dish.marital, "email": dish.email, "marketing": dish.marketing,
       "datePV": dish.datePV, "clinic": dish.clinic, "comercial": dish.comercial, 
-      "doctorPV": dish.doctorPV, "importeFF": dish.importeFF, "DNIFF": dish.DNIFF,
+      "tipoPV": dish.tipoPV, "doctorPV": dish.doctorPV, "importeFF": dish.importeFF, "DNIFF": dish.DNIFF,
       "financiera": dish.financiera, "estadoFF": dish.estadoFF, "formaPago": dish.formaPago,
       "facturado": dish.facturado, "description": dish.description, 
       "campo1":dish.campo1, "campo2":dish.campo2 })

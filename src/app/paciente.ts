@@ -14,6 +14,7 @@ export class Paciente {
     datePV: string;
     clinic: string;
     comercial: string;
+    tipoPV: string;
     doctorPV: string;
     importeFF: number;
     DNIFF: number; //DNI de quien financia
@@ -22,4 +23,7 @@ export class Paciente {
     formaPago: string;
     facturado: number;
     description: string;
+    /*campos auxiliares para posible uso futuro*/
+    campo1: string; 
+    campo2: string;
   }
