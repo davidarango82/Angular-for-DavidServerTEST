@@ -13,7 +13,7 @@ import { isDate } from 'util';
 export class NuevoComponent implements OnInit {
 
   cities = ['Bogota', 'Medellin', 'Cali', 'Barranquilla', 'Pasto'];
-  clinics = ['Calle 90', 'Santafe', 'Unicentro', 'Andino'];
+  clinics = ['calle90', 'santafe', 'unicentro', 'andino'];
   barrios = ['Rosales', 'San José de Bavaria', 'Usaquen', 'Cedritos'];
   marketings = ['TV', 'radio', 'calle', 'volante', 'recibo de servicios', 'un amigo'];
   comercials = ['com1', 'com2', 'com3'];
@@ -40,11 +40,13 @@ export class NuevoComponent implements OnInit {
     marketing: '',
     /**datos diligenciados por clinica */
     datePV: '',
-    clinic: this.clinics[0],
-    tipoPV: this.tipoPVs[0],
+    historial: '',
+    clinic: '',
+    tipoPV: '',
     comercial: '',
     doctorPV: '',
     importeFF: 0,
+    nombreFF: '',
     DNIFF: null,
     financiera: this.financieras[0],
     estadoFF: '',

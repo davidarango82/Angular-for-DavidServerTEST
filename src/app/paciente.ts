@@ -12,11 +12,13 @@ export class Paciente {
     email: string;
     marketing: string;
     datePV: string;
+    historial: string;
     clinic: string;
     comercial: string;
     tipoPV: string;
     doctorPV: string;
     importeFF: number;
+    nombreFF: string;
     DNIFF: number; //DNI de quien financia
     financiera: string;
     estadoFF: string;

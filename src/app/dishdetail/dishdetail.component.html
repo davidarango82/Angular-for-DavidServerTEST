@@ -180,18 +180,18 @@
           </div>
         </div>
 
-        <!-- <div class="form-group">
-          <label for="tipoPV">Tipo de Primera</label>
+        <div class="form-group">
+          <label for="tipoPV">Tipo de PV</label>
           <select class="form-control" id="tipoPV"
                   required
                   [(ngModel)]="dish.tipoPV" name="tipoPV"
                   #tipoPV="ngModel">
-            <option *ngFor="pv of tipoPVs" [value]="pv">{{pv}}</option>
+            <option *ngFor="let tip of tipoPVs" [value]="tip">{{tip}}</option>
           </select>
           <div [hidden]="tipoPV.valid || tipoPV.pristine" class="alert alert-danger">
             campo requerido
           </div>
-        </div> -->
+        </div>
 
         <div class="form-group">
           <label for="comercial">Comercial</label>
@@ -291,6 +291,20 @@
           <input type=text class="form-control" id="description"
                 [(ngModel)]="dish.description" name="description"
                 #description="ngModel">
+        </div>
+
+        <div class="form-group">
+          <label for="historial">Historial</label>
+          <input type=text class="form-control" id="historial"
+                [(ngModel)]="dish.historial" name="historial"
+                #historial="ngModel">
+        </div>
+
+        <div class="form-group">
+          <label for="nombreFF">nombre de quien FF</label>
+          <input type=text class="form-control" id="nombreFF"
+                [(ngModel)]="dish.nombreFF" name="nombreFF"
+                #nombreFF="ngModel">
         </div>
 
       <button (click)="goBack()">go back</button>

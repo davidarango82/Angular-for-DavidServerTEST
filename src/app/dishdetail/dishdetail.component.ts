@@ -39,7 +39,7 @@ export class DishdetailComponent implements OnInit {
 
   /** validation values */
   cities = ['Bogota', 'Medellin', 'Cali', 'Barranquilla', 'Pasto'];
-  clinics = ['Calle 90', 'Santafe', 'Unicentro', 'Andino'];
+  clinics = ['calle90', 'santafe', 'unicentro', 'andino'];
   barrios = ['Otro', 'Rosales', 'San José de Bavaria', 'Usaquen', 'Cedritos'];
   marketings = ['TV', 'radio', 'calle', 'volante', 'recibo de servicios', 'un amigo'];
   comercials = ['Lisseth Lemus', 'Francisco Mora', 'Andres Ardila', 'Diego Garcia', 
