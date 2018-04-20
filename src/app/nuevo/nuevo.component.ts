@@ -41,7 +41,7 @@ export class NuevoComponent implements OnInit {
     /**datos diligenciados por clinica */
     datePV: '',
     historial: '',
-    clinic: '',
+    clinic: ' ', //aqui hay un espacio!! para pruebas :)
     tipoPV: '',
     comercial: '',
     doctorPV: '',
