@@ -11,6 +11,7 @@ import { ContactComponent } from '../contact/contact.component';
 import { FavoritesComponent } from '../favorites/favorites.component';
 //ruta para modulo Nuevo Paciente
 import { NuevoComponent } from '../nuevo/nuevo.component';
+import { SearchComponent } from '../search/search.component';
 
 export const routes: Routes = [
   { path: 'home',  component: HomeComponent },
@@ -21,5 +22,6 @@ export const routes: Routes = [
   { path: 'dishdetail/:id',     component: DishdetailComponent },
   //ruta para modulo Nuevo Paciente
   { path: 'nuevo',     component: NuevoComponent },
+  { path: 'search', component: SearchComponent},
   { path: '', redirectTo: '/menu', pathMatch: 'full' }
 ];

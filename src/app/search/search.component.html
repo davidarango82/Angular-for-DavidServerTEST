@@ -1,0 +1,18 @@
+<div id="search-component">
+  <h4>Búsqueda</h4>
+  <input #searchBox id="search-box"/>
+  <div>
+
+    <div fxFlex *ngIf="dishes" [@expand]>
+      <mat-grid-list cols="1" rowHeight="50px">
+        <mat-grid-tile *ngFor="let dish of dishes" [routerLink]="['/dishdetail', dish._id]" appHighlight>
+          <!-- <img height="200px" src="{{BaseURL + dish.image}}" alt={{dish.name}}> -->
+          <mat-grid-tile-footer>
+            <h1 mat-line>{{dish.name | uppercase}} {{dish.lastName | uppercase}} cc:{{dish.id_num}}</h1>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+
+
+</div>

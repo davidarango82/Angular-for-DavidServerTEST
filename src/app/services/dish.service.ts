@@ -17,6 +17,11 @@ export class DishService {
   constructor(private http: HttpClient,
     private processHTTPMsgService: ProcessHTTPMsgService) { }
 
+  searchDishesbyName(nam: string): Observable<Dish[]> {
+    return this.http.get(baseURL + 'dishes/?' + nam)
+      .catch(error => { return this.processHTTPMsgService.handleError(error); });
+  }  
+
   getDishes(): Observable<Dish[]> {
     return this.http.get(baseURL + 'dishes')
     .catch(error => { return this.processHTTPMsgService.handleError(error); });

@@ -40,6 +40,7 @@ import { RestangularConfigFactory } from './shared/restConfig';
 import { HighlightDirective } from './directives/highlight.directive';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import { NuevoComponent } from './nuevo/nuevo.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { NuevoComponent } from './nuevo/nuevo.component';
     LoginComponent,
     HighlightDirective,
     FavoritesComponent,
-    NuevoComponent
+    NuevoComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
