@@ -17,7 +17,6 @@ import { flyInOut, expand } from '../animations/app.animation';
   ]
 })
 
-
 export class SearchComponent implements OnInit {
   dishes: Dish[];
   errMess: string;
