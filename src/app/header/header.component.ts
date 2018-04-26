@@ -6,6 +6,7 @@ import { MatDialog, MatDialogRef } from '@angular/material';
 import { LoginComponent } from '../login/login.component';
 import { AuthService } from '../services/auth.service';
 import { NgIf } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -18,7 +19,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   subscription: Subscription;
 
   constructor(public dialog: MatDialog,
-    private authService: AuthService ) { 
+    private authService: AuthService, private router: Router ) { 
     }
 
   ngOnInit() {
@@ -43,6 +44,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   logOut() {
     this.username = undefined;
     this.authService.logOut();
+    this.router.navigateByUrl('/menu');
   }
 
 }

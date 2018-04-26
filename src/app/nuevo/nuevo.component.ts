@@ -4,13 +4,20 @@ import { DishService } from '../services/dish.service';
 import { NullTemplateVisitor } from '@angular/compiler';
 import { isDate } from 'util';
 //import { Validations } from '../shared/validations';
+import { AuthService } from '../services/auth.service';
+import { Subscription } from 'rxjs/Subscription';
 
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
+ 
 @Component({
   selector: 'app-nuevo',
   templateUrl: './nuevo.component.html',
   styleUrls: ['./nuevo.component.scss']
 })
 export class NuevoComponent implements OnInit {
+
+  subscription: Subscription;
 
   cities = ['Bogota', 'Medellin', 'Cali', 'Barranquilla', 'Pasto'];
   clinics = ['calle90', 'santafe', 'unicentro', 'andino'];
@@ -41,7 +48,7 @@ export class NuevoComponent implements OnInit {
     /**datos diligenciados por clinica */
     datePV: '',
     historial: '',
-    clinic: ' ', //aqui hay un espacio!! para pruebas :)
+    clinic: '',
     tipoPV: '',
     comercial: '',
     doctorPV: '',
@@ -57,9 +64,14 @@ export class NuevoComponent implements OnInit {
     campo2: ''
   };
 
-  constructor(private dishService: DishService) { }
+  constructor(private dishService: DishService, private authService: AuthService, 
+    private location: Location,) { }
 
   ngOnInit() {
+
+    // this.subscription = this.authService.getUsername()
+    //   .subscribe(name => { console.log(name); this.paciente.clinic = name; });   
+
   }
 
   onSubmit() {
@@ -67,17 +79,26 @@ export class NuevoComponent implements OnInit {
     //this.dishService.getDishes()
     this.dishService.postDish(this.paciente)
       .subscribe(res => {
-        // if (res.success) {
-        //   this.dialogRef.close(res.success);          
-        // }
-        // else {
-        //   console.log(res);
-        // }
+
+        this.location.back();
+
       },
       error => {
         console.log(error);
         //this.errMess = error
       })
+      
+      // this.subscription.unsubscribe();
+      // console.log("unsubscribed...");
+
+      //this.ngOnInit();
+
+  }
+
+  getUser(){
+    console.log("clicked!");
+    this.subscription = this.authService.getUsername()
+    .subscribe(name => { console.log(name); this.paciente.clinic = name; });
   }
 
 }

@@ -18,6 +18,9 @@ import { flyInOut, expand } from '../animations/app.animation';
 })
 
 export class SearchComponent implements OnInit {
+
+  name: string;
+  lastName: string;
   dishes: Dish[];
   errMess: string;
 
@@ -25,9 +28,16 @@ export class SearchComponent implements OnInit {
     @Inject('BaseURL') private BaseURL) { }
 
   ngOnInit() {
-    this.dishService.searchDishesbyName("Juancho")
+
+    this.name = "";
+
+  }
+
+  runSearch(){
+    this.dishService.searchDishesbyName(this.name)
       .subscribe(dishes => this.dishes = dishes,
         errmess => this.errMess = <any>errmess);
+    
   }
 
 }

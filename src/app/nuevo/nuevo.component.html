@@ -2,7 +2,22 @@
   <div>
       <h3>Información Personal</h3>
 
-      <form (ngSubmit)="onSubmit()" #nuevoForm="ngForm">      
+      <!-- <a (click) = "getUser()">get user!</a> -->
+
+      <form (ngSubmit)="onSubmit()" #nuevoForm="ngForm">   
+        
+        <div class="form-group">
+          <label for="clinic">Clínica</label>
+          <select class="form-control" id="clinic"
+            required
+            [(ngModel)]="paciente.clinic" name="clinic"
+            #clinic="ngModel">
+            <option *ngFor="let clin of clinics" [value]="clin">{{clin}}</option>
+          </select>
+          <div [hidden]="clinic.valid || clinic.pristine" class="alert alert-danger">
+            campo requerido
+          </div>
+        </div>
 
         <div class="form-group">
           <label for="id_num">Cédula</label>
