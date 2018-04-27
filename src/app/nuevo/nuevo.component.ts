@@ -21,7 +21,7 @@ export class NuevoComponent implements OnInit {
 
   cities = ['Bogota', 'Medellin', 'Cali', 'Barranquilla', 'Pasto'];
   clinics = ['calle90', 'santafe', 'unicentro', 'andino'];
-  barrios = ['Rosales', 'San José de Bavaria', 'Usaquen', 'Cedritos'];
+  barrios = ['Otro','Rosales', 'San José de Bavaria', 'Usaquen', 'Cedritos'];
   marketings = ['TV', 'radio', 'calle', 'volante', 'recibo de servicios', 'un amigo'];
   comercials = ['com1', 'com2', 'com3'];
   maritals = ['soltero', 'casado', 'union libre', 'separado', 'viudo'];
@@ -29,7 +29,7 @@ export class NuevoComponent implements OnInit {
   formasdepago = ['N/A', 'Pronto pago', 'Financiado'];
   financieras = ['N/A', 'Colpatria', 'BBVA', 'Denticuotas'];
   tipoPVs = ['Primera Visita', 'Traslado'];
-  estadoFFs = ['Prevision', 'Denegado', 'Imputado', 'Facturado']
+  estadoFFs = ['N/A', 'Prevision', 'Denegado', 'Imputado', 'Facturado']
 
   paciente: Paciente = {
     /** datos diligenciados por el paciente */
@@ -56,9 +56,9 @@ export class NuevoComponent implements OnInit {
     nombreFF: '',
     DNIFF: null,
     financiera: this.financieras[0],
-    estadoFF: '',
+    estadoFF: this.estadoFFs[0],
     formaPago: this.formasdepago[0],
-    facturado: null,
+    facturado: 0,
     description: '',
     campo1: '',
     campo2: ''
