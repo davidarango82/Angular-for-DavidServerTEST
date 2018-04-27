@@ -14,7 +14,7 @@
       <mat-grid-tile *ngFor="let dish of dishes" [routerLink]="['/dishdetail', dish._id]" appHighlight>
         <!-- <img height="200px" src="{{BaseURL + dish.image}}" alt={{dish.name}}> -->
         <mat-grid-tile-footer>
-          <h1 mat-line>{{dish.name | uppercase}} {{dish.lastName | uppercase}} cc:{{dish.id_num}}</h1>
+          <h1 mat-line>{{dish.name}} {{dish.lastName}} *** CC:{{dish.id_num}} *** FACTURADO:${{dish.facturado}}</h1>
         </mat-grid-tile-footer>
       </mat-grid-tile>
     </mat-grid-list>
