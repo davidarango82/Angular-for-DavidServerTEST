@@ -45,7 +45,10 @@ export class DishdetailComponent implements OnInit {
   comercials = ['Ana Maria Palacio', 'Carlos Andres Delgado', 'Nataly Vasquez', 
     'Andrea Alcala', 'Ana Esteban', 'Paula Pedroza'];
   maritals = ['soltero', 'casado', 'union libre', 'separado', 'viudo'];
-  doctors = ['N/A'];
+  doctors = ['N/A', 'Martha Lizette Serrato', 'Alberto Jose Peraza',  
+    'Johan Elias Basterrechea', 'Lia Cristina Baquero', 'Jennifer Martinez',  
+    'Martha Ligia Sanchez', 'Monica Saavedra', 'Luz Aida Moreno', 'Angela Sastre',
+    'Juan Carlos Suarez', 'Liliana Rojas', 'Johana Maricela Goyeneche'];
   formasdepago = ['N/A', 'Pronto pago', 'Financiado'];
   financieras = ['N/A', 'Colpatria', 'BBVA', 'Denticuotas'];
   tipoPVs = ['Primera Visita', 'Traslado'];

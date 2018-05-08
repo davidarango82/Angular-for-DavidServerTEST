@@ -43,12 +43,24 @@
       </div>
 
       <div class="form-group">
-        <label for="phone">Teléfono</label>
-          <input type="number" class="form-control" id="id_num"
+        <label for="phone">Teléfono 1</label>
+          <input type="number" class="form-control" id="phone"
             required
             [(ngModel)]="dish.phone" name="phone"
             #phone="ngModel">
           <div [hidden]="phone.valid || phone.pristine"
+            class="alert alert-danger">
+            campo requerido
+          </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone2">Teléfono 2</label>
+          <input type="number" class="form-control" id="phone2"
+            required
+            [(ngModel)]="dish.phone2" name="phone2"
+            #phone2="ngModel">
+          <div [hidden]="phone2.valid || phone2.pristine"
             class="alert alert-danger">
             campo requerido
           </div>
