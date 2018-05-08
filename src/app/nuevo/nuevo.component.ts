@@ -20,7 +20,7 @@ export class NuevoComponent implements OnInit {
   subscription: Subscription;
 
   cities = ['Bogota', 'Medellin', 'Cali', 'Barranquilla', 'Pasto'];
-  clinics = ['calle90', 'santafe', 'unicentro', 'andino'];
+  clinics = ['unicentro', 'calle90', 'santafe', 'andino'];
   barrios = ['Otro','Rosales', 'San José de Bavaria', 'Usaquen', 'Cedritos'];
   marketings = ['TV', 'radio', 'calle', 'volante', 'recibo de servicios', 'un amigo'];
   comercials = ['com1', 'com2', 'com3'];
@@ -37,6 +37,7 @@ export class NuevoComponent implements OnInit {
     name: '',
     lastName: '',
     phone: null,
+    phone2: null,
     city: this.cities[0],
     barrio: this.barrios[0],
     address: '',

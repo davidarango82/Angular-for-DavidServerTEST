@@ -3,6 +3,7 @@ export class Paciente {
     name: string;
     lastName: string;
     phone: number;
+    phone2: number;
     city: string;
     barrio: string;
     address: string;

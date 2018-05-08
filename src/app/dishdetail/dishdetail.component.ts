@@ -42,14 +42,10 @@ export class DishdetailComponent implements OnInit {
   clinics = ['calle90', 'santafe', 'unicentro', 'andino'];
   barrios = ['Otro', 'Rosales', 'San José de Bavaria', 'Usaquen', 'Cedritos'];
   marketings = ['TV', 'radio', 'calle', 'volante', 'recibo de servicios', 'un amigo'];
-  comercials = ['Lisseth Lemus', 'Francisco Mora', 'Andres Ardila', 'Diego Garcia', 
-  'Nubia Pinzon', 'Javier Tibaduiza', 'Alisson Mora', 'Liliana Reyes', 'Claudia Tamayo'];
+  comercials = ['Ana Maria Palacio', 'Carlos Andres Delgado', 'Nataly Vasquez', 
+    'Andrea Alcala', 'Ana Esteban', 'Paula Pedroza'];
   maritals = ['soltero', 'casado', 'union libre', 'separado', 'viudo'];
-  doctors = ['N/A', 'Maria Suarez', 'Laura Roncancio', 'Manuel Manjarrez', 
-  'Johanna Mendoza', 'Luz Quesada', 'Johan Basterrechea', 'Zulma Rojas',
-  'Sebastian Rivera','Sandra Mancera', 'Diana Castillo', 'Diana Florez', 
-  'Viviana Diaz', 'Catalina Monroy', 'Mauricio Montoya',
-  'Tatiana Angulo', 'Ricardo Posada'];
+  doctors = ['N/A'];
   formasdepago = ['N/A', 'Pronto pago', 'Financiado'];
   financieras = ['N/A', 'Colpatria', 'BBVA', 'Denticuotas'];
   tipoPVs = ['Primera Visita', 'Traslado'];

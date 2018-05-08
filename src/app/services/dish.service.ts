@@ -53,7 +53,7 @@ export class DishService {
   postDish(paciente) {
     return this.http.post(baseURL + 'dishes', 
       { "id_num": paciente.id_num, "name": paciente.name, "lastName": paciente.lastName, 
-      "phone": paciente.phone, "city": paciente.city, "barrio": paciente.barrio, 
+      "phone": paciente.phone, "phone2": paciente.phone2, "city": paciente.city, "barrio": paciente.barrio, 
       "address": paciente.address, "sex": paciente.sex, "birthday": paciente.birthday, 
       "marital": paciente.marital, "email": paciente.email, "marketing": paciente.marketing,
       "datePV": paciente.datePV, "tipoPV": paciente.tipoPV, "clinic": paciente.clinic, "comercial": paciente.comercial, 
@@ -69,7 +69,7 @@ export class DishService {
   updateDish(dish) {
     return this.http.put(baseURL + 'dishes/' + dish._id, 
       { "id_num": dish.id_num, "name": dish.name, "lastName": dish.lastName, 
-      "phone": dish.phone, "city": dish.city, "barrio": dish.barrio, 
+      "phone": dish.phone, "phone2": dish.phone2, "city": dish.city, "barrio": dish.barrio, 
       "address": dish.address, "sex": dish.sex, "birthday": dish.birthday, 
       "marital": dish.marital, "email": dish.email, "marketing": dish.marketing,
       "datePV": dish.datePV, "clinic": dish.clinic, "comercial": dish.comercial, 
