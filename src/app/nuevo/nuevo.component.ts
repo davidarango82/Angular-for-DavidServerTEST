@@ -22,7 +22,7 @@ export class NuevoComponent implements OnInit {
   cities = ['Bogota', 'Medellin', 'Cali', 'Barranquilla', 'Pasto'];
   clinics = ['unicentro', 'calle90', 'santafe', 'andino'];
   barrios = ['Otro','Rosales', 'San José de Bavaria', 'Usaquen', 'Cedritos'];
-  marketings = ['TV', 'radio', 'calle', 'volante', 'recibo de servicios', 'un amigo'];
+  marketings = ['stand', 'TV', 'radio', 'calle', 'volante', 'recibo de servicios', 'un amigo'];
   comercials = ['com1', 'com2', 'com3'];
   maritals = ['soltero', 'casado', 'union libre', 'separado', 'viudo'];
   doctors = ['N/A', 'doc1', 'doc2', 'doc3'];

@@ -41,7 +41,7 @@ export class DishdetailComponent implements OnInit {
   cities = ['Bogota', 'Medellin', 'Cali', 'Barranquilla', 'Pasto'];
   clinics = ['calle90', 'santafe', 'unicentro', 'andino'];
   barrios = ['Otro', 'Rosales', 'San José de Bavaria', 'Usaquen', 'Cedritos'];
-  marketings = ['TV', 'radio', 'calle', 'volante', 'recibo de servicios', 'un amigo'];
+  marketings = ['stand', 'TV', 'radio', 'calle', 'volante', 'recibo de servicios', 'un amigo'];
   comercials = ['Ana Maria Palacio', 'Carlos Andres Delgado', 'Nataly Vasquez', 
     'Andrea Alcala', 'Ana Esteban', 'Paula Pedroza'];
   maritals = ['soltero', 'casado', 'union libre', 'separado', 'viudo'];
@@ -52,7 +52,9 @@ export class DishdetailComponent implements OnInit {
   formasdepago = ['N/A', 'Pronto pago', 'Financiado'];
   financieras = ['N/A', 'Colpatria', 'BBVA', 'Denticuotas'];
   tipoPVs = ['Primera Visita', 'Traslado'];
-  estadoFFs = ['Prevision', 'Denegado', 'Imputado', 'Facturado']
+  estadoFFs = ['Prevision', 'Denegado', 'Imputado', 'Facturado'];
+  conclusions =['SE LO PIENSA, TIENE DUDAS', 'SI, ACEPTADO', 'DERIVAR A ESPECIALISTA',
+  'INFINANCIABLE', 'SIN PRESUPUESTO'];
 
   formErrors = {
     'author': '',

@@ -232,6 +232,19 @@
         </div>
 
         <div class="form-group">
+          <label for="campo1">Conclusion PV</label>
+          <select class="form-control" id="campo1"
+                  required
+                  [(ngModel)]="dish.campo1" name="campo1"
+                  #campo1="ngModel">
+            <option *ngFor="let con of conclusions" [value]="con">{{con}}</option>
+          </select>
+          <div [hidden]="campo1.valid || campo1.pristine" class="alert alert-danger">
+            campo requerido
+          </div>
+        </div>
+
+        <div class="form-group">
           <label for="formaPago">Forma de Pago</label>
           <select class="form-control" id="formaPago"
                   required
