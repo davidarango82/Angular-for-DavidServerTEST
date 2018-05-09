@@ -50,7 +50,7 @@ export class NuevoComponent implements OnInit {
     datePV: '',
     historial: '',
     clinic: '',
-    tipoPV: '',
+    tipoPV: this.tipoPVs[0],
     comercial: '',
     doctorPV: '',
     importeFF: 0,
@@ -61,7 +61,7 @@ export class NuevoComponent implements OnInit {
     formaPago: this.formasdepago[0],
     facturado: 0,
     description: '',
-    campo1: '',
+    campo1: 'SE LO PIENSA, TIENE DUDAS',
     campo2: ''
   };
 

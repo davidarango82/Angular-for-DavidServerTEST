@@ -51,8 +51,8 @@ export class DishdetailComponent implements OnInit {
     'Juan Carlos Suarez', 'Liliana Rojas', 'Johana Maricela Goyeneche'];
   formasdepago = ['N/A', 'Pronto pago', 'Financiado'];
   financieras = ['N/A', 'Colpatria', 'BBVA', 'Denticuotas'];
-  tipoPVs = ['Primera Visita', 'Traslado'];
-  estadoFFs = ['Prevision', 'Denegado', 'Imputado', 'Facturado'];
+  tipoPVs = ['Primera Visita', 'Traslado', 'Ampliacion', 'Old Contact'];
+  estadoFFs = ['Prevision', 'Denegado', 'Imputado', 'Abonado'];
   conclusions =['SE LO PIENSA, TIENE DUDAS', 'SI, ACEPTADO', 'DERIVAR A ESPECIALISTA',
   'INFINANCIABLE', 'SIN PRESUPUESTO'];
 
