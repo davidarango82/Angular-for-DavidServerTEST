@@ -2,8 +2,8 @@ export class Paciente {
     id_num: number;
     name: string;
     lastName: string;
-    phone: number;
-    phone2: number;
+    phone: string;
+    phone2: string;
     city: string;
     barrio: string;
     address: string;
